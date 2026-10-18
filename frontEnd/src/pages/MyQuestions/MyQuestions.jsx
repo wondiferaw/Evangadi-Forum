@@ -14,6 +14,7 @@ export default function MyQuestions() {
   const [questions, setQuestions] = useState([]),
     [loading, setLoading] = useState(true),
     [error, setError] = useState("");
+
   useEffect(() => {
     (async () => {
       try {

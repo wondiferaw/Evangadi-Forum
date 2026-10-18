@@ -10,6 +10,7 @@ import { NotFoundError } from "../../../utility/errors/errors.js";
 /**
  * Lets the request pass only if the room of :roomId exists.
  * Otherwise answers 404.
+ * we have 6 romms so room id (1,2,3,4,5,6)
  */
 const requireRoomExists = async (req, res, next) => {
   try {

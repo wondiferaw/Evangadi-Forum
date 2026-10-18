@@ -17,7 +17,7 @@ const roomRouter = express.Router();
 roomRouter.use(authenticateUser);
 //how many routes are there for rooms? 5 routes
 //1. GET /api/rooms - List every room, newest activity first
-//2. GET /api/rooms/:roomId - Get one room
+//2. GET /api/rooms/:roomId - Get one room/
 //3. POST /api/rooms/:roomId/members - Join the room (201). Already a member: 200
 //4. GET /api/rooms/:roomId/messages - The latest 50 messages
 //5. POST /api/rooms/:roomId/messages - Post one message (1 to 2000 characters)
@@ -38,7 +38,7 @@ roomRouter.get("/", listRoomsController);
 
 /**
  * @route GET /api/rooms/:roomId
- * @desc Get one room
+ * @desc Get one room/
  * @access Protected
  */
 roomRouter.get("/:roomId", roomIdParamValidation, getRoomController);
