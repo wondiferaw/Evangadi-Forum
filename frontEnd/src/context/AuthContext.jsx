@@ -111,8 +111,6 @@ export function AuthProvider({ children }) {
       login,
       register,
       logout,
-
-      updateUser,
     }),
 
     [user, isAuthenticated, sessionExpired],

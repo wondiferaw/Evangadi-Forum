@@ -28,7 +28,7 @@ function getAvatarPreviewUrl(avatar) {
 }
 
 export default function Profile() {
-  const { user, updateUser } = useAuth();
+  const { user } = useAuth();
   const navigate = useNavigate();
   const [profile, setProfile] = useState(null);
   const [form, setForm] = useState(emptyForm());
@@ -145,8 +145,6 @@ export default function Profile() {
 
       const response = await updateUserProfile(user.id, payload);
       const nextProfile = response.data?.data ?? response.data;
-
-      updateUser(nextProfile);
 
       setProfile(nextProfile);
       setForm(emptyForm(nextProfile));
